@@ -15,11 +15,14 @@ def extract_rules(lines: list, rulesstart_sign: str, rulesend_sign: str):
     '''
     Extracts rules between specific markers in the input.
     '''
-    try:
-        start_index = lines.index(rulesstart_sign) # match with whole line, to see begining matching, check extract_codes
-        end_index = lines.index(rulesend_sign)
-    except ValueError:
-        return {}
+    start_index = next((i for i, l in enumerate(lines) if rulesstart_sign in l), -1)
+    end_index = next((i for i, l in enumerate(lines) if rulesend_sign in l), -1)
+
+    # try:
+    #     start_index = lines.index(rulesstart_sign) # match with whole line, to see begining matching, check extract_codes
+    #     end_index = lines.index(rulesend_sign)
+    # except ValueError:
+    #     return {}
 
     if start_index == -1 and end_index == -1:
         return {}

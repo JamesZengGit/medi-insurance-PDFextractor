@@ -10,10 +10,6 @@ def test_extract_pdf_lines():
     assert all(isinstance(line, str) for line in lines)
     assert len(lines) > 0
 
-import os
-import pytest
-from src.parser import extract_pdf_lines
-
 def test_extract_pdf_lines_nonexistent(tmp_path):
     with pytest.raises(FileNotFoundError):
         extract_pdf_lines(str(tmp_path / "no.pdf"))

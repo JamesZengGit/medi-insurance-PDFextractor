@@ -1,4 +1,12 @@
-## Project Overview
+## Project Purpose
+
+This project provides a **robust, modular pipeline** for extracting structured knowledge from medical insurance PDFs --- a key preprocessing step for knowledge graph embedding in biomedical computing. Designed with scalability and open-source goals in mind, it *hopefully >_<* addresses the **urgent need** Bay Area medical AI and healthtech startups to turn unstructured policy text into machine-readable formats for downstream reasoning and analytics. Inspired by **insights gained through conversations** with innovative startup founders, I identified a recurring need for automated document understanding tools in early-stage healthcare ventures.
+
+key words: end-to-end extraction, API configurations, clean architectures, comprehensive tests
+
+---
+
+## Overview
 
 **Medical PDF Extractor** is a modular Python pipeline that downloads medical insurance policy PDFs, parses their contents, and extracts structured information (titles, policy criteria rules, and codes). The extracted data is intended for ingestion into a knowledge graph.
 
@@ -106,6 +114,7 @@ medical-pdf-extractor/
     ├── test_downloader.py
     ├── test_parser.py
     ├── test_extractor.py
+    ├── test_resulting.py
     └── test_utils.py
 ```
 
